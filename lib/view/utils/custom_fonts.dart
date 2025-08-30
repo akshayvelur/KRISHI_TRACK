@@ -6,13 +6,24 @@ final splashLogo= GoogleFonts.orbitron(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
               );
-              final IntroHeadLineFont= GoogleFonts.play(
+              final introHeadLineFont= GoogleFonts.play(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               );
-                final IntroSubLineFont= GoogleFonts.play(
+                final introSubLineFont= GoogleFonts.play(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 18,height: 1.1, 
+              );
+               final introSubLineFontBlk= GoogleFonts.play(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,height: 1.1, 
+              );
+
+                final homeLogoFont= GoogleFonts.orbitron(
+                color: const Color(0xFF407B52),
+                fontWeight: FontWeight.bold,
+                fontSize: 18,height: 1.1, 
               );
