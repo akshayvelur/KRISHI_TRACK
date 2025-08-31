@@ -10,6 +10,7 @@
 analyzer:
   errors:
     depend_on_referenced_packages: ignore
+    empty_constructor_bodies: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

@@ -5,3 +5,4 @@ sealed class SplashState {}
 
 final class SplashInitial extends SplashState {}
 class SplashToIntroductionOneState extends SplashState{}
+class NavigateToHomeScreensate extends SplashState{}

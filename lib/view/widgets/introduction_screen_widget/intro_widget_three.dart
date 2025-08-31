@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:krishi_track/controller/authentication.dart';
 import 'package:krishi_track/view/bottom_navigator/bottom_navigator.dart';
 import 'package:krishi_track/view/home_screen/home_screen.dart';
 import 'package:krishi_track/view/introduction_screen/bloc/introduction_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:krishi_track/view/utils/custom_colors.dart';
 import 'package:krishi_track/view/utils/custom_fonts.dart';
 import 'package:krishi_track/view/utils/mediaquery.dart';
 import 'package:krishi_track/view/utils/navigation_animation.dart';
+import 'package:lottie/lottie.dart';
 
 class IntroWidgetThree extends StatelessWidget {
   const IntroWidgetThree({super.key});
@@ -18,9 +20,13 @@ class IntroWidgetThree extends StatelessWidget {
     BlocListener<IntroductionBloc, IntroductionState>(
       listener: (context, state) {
         // TODO: implement listener
-        if(state is IntroductionToBottomNavigationState){
- navigateWithAnimation(context,BottomNavigatorScreen());
+        if(state is LoginState){
+         navigateWithAnimation(context,BottomNavigatorScreen());
           
+        }
+        if(state is LoadingState){
+          showDialog(context: context,builder: (context) => AlertDialog(backgroundColor: Colors.transparent,
+          content: Center(child: Lottie.asset("assets/Loading logo (1).json",height:mediaqueryHeight(0.2, context),width: mediaqueryWidth(0.2, context))),),);
         }
       },
       child: Stack(
@@ -68,7 +74,9 @@ class IntroWidgetThree extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {context.read<IntroductionBloc>().add(IntroductionToBottomNavigationEvent());},
+                  onTap: () {
+                    context.read<IntroductionBloc>().add(LoginEvent());
+                    },
                   child: Container(
                     height: mediaqueryHeight(.05, context),
                     width: mediaqueryWidth(.85, context),

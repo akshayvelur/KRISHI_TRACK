@@ -3,6 +3,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:krishi_track/controller/authentication.dart';
+import 'package:krishi_track/view/bottom_navigator/bottom_navigator.dart';
+import 'package:krishi_track/view/home_screen/home_screen.dart';
 import 'package:krishi_track/view/introduction_screen/introduction.dart';
 import 'package:krishi_track/view/splash_screen/bloc/splash_bloc.dart';
 import 'package:krishi_track/view/utils/navigation_animation.dart';
@@ -15,6 +18,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
+     //GoogleSignInService.signOut();
       context.read<SplashBloc>().add(SplashNavigateEvent());
     });
     return BlocListener<SplashBloc, SplashState>(
@@ -22,6 +26,9 @@ class SplashScreen extends StatelessWidget {
         // TODO: implement listener
         if(state is SplashToIntroductionOneState){
          Navigator.pushReplacement(context, FadeTransitionPageRoute(child: IntroductionScreen()));
+        }
+          if(state is NavigateToHomeScreensate){
+         Navigator.pushReplacement(context, FadeTransitionPageRoute(child: BottomNavigatorScreen()));
         }
       },
       child: Scaffold(body: SplashImage()),

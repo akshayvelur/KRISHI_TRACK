@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "929588607054",
+    "project_id": "krishi-track-6516d",
+    "storage_bucket": "krishi-track-6516d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929588607054:android:b4eade113529a9c336eb1f",
+        "android_client_info": {
+          "package_name": "com.example.krishi_track"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929588607054-ja9hbg76ni9i3qv8u2t8li0n4d75agc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.krishi_track",
+            "certificate_hash": "bd2162ce03921ae9f4cba0858eba5df8a45301f4"
+          }
+        },
+        {
+          "client_id": "929588607054-fp9hlb8gllu2meqmudevboihhe787ler.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0--HTmUT8wokFiqEKRhvjt_TYhqAC0w4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929588607054-fp9hlb8gllu2meqmudevboihhe787ler.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "929588607054-s6s0nlkvk45b6nor08boem3or86vr3cj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.krishiTrack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

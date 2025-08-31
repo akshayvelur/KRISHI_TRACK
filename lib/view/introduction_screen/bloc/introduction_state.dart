@@ -4,4 +4,5 @@ part of 'introduction_bloc.dart';
 sealed class IntroductionState {}
 
 final class IntroductionInitial extends IntroductionState {}
-class IntroductionToBottomNavigationState extends IntroductionState{}
+class LoginState extends IntroductionState{}
+class LoadingState extends IntroductionState{}
