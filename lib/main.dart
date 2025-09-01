@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:krishi_track/firebase_options.dart';
 import 'package:krishi_track/view/bottom_navigator/bloc/bottom_sheet_bloc.dart';
+import 'package:krishi_track/view/details_screen.dart/bloc/details_bloc.dart';
 import 'package:krishi_track/view/home_screen/bloc/home_bloc.dart';
 import 'package:krishi_track/view/introduction_screen/bloc/introduction_bloc.dart';
 import 'package:krishi_track/view/splash_screen/bloc/splash_bloc.dart';
@@ -11,6 +13,7 @@ import 'package:provider/provider.dart';
 void main() async{
     WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -24,7 +27,8 @@ class MyApp extends StatelessWidget {
         Provider(create: (context) => SplashBloc()),
         Provider(create: (context) => IntroductionBloc()),
         Provider(create: (context) => BottomSheetBloc()),
-        Provider(create: (context) => HomeBloc(),)
+        Provider(create: (context) => HomeBloc(),
+        ),Provider(create: (context) => DetailsBloc(),)
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

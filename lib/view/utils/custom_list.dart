@@ -1,0 +1,2 @@
+List<String>microImages=["assets/French Thyme Microgreens_ Photographs by Lyneage Photography.jpeg","assets/Why-Rambo-Radish-Microgreens.jpg","assets/Microgreens.jpeg"];
+List<String>vegImages=["assets/download (4).jpeg","assets/Salad Plants - Lettuce 'Iceberg' - 12 x Large Plant Pack.jpeg","assets/Why Am I Craving Tomatoes_.jpeg"];

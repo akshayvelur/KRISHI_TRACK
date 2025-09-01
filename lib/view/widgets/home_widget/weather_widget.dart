@@ -14,39 +14,42 @@ class WeatherWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: mediaqueryHeight(.27, context),
-      width: mediaqueryWidth(10, context),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        image: DecorationImage(
-          image: AssetImage(
-            "assets/Download free image of Green sky backgrounds landscape_ by Boom about abstract, hillside cartoon, background, design background, and cartoon 12111505.jpeg",
+    return Padding(
+      padding: const EdgeInsets.only(left: 15,right: 15),
+      child: Container(
+        height: mediaqueryHeight(.27, context),
+        width: mediaqueryWidth(10, context),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image: DecorationImage(
+            image: AssetImage(
+              "assets/Download free image of Green sky backgrounds landscape_ by Boom about abstract, hillside cartoon, background, design background, and cartoon 12111505.jpeg",
+            ),
+            fit: BoxFit.fill,
           ),
-          fit: BoxFit.fill,
         ),
-      ),
-     child:  _weather != null ? Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        
+       child:  _weather != null ? Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          
+              Padding(
+                padding: const EdgeInsets.only(left: 30, top: 30),
+                child: Text(
+                  "${_weather!.tempFeelsLike!.celsius!.round()}°C",
+                  style: tempFont,
+                ),
+              ),
             Padding(
-              padding: const EdgeInsets.only(left: 30, top: 30),
+              padding: const EdgeInsets.only(left: 30, top: 120),
               child: Text(
-                "${_weather!.tempFeelsLike!.celsius!.round()}°C",
-                style: tempFont,
+                _weather!.weatherDescription!,
+                style: climatFont,overflow: TextOverflow.ellipsis,
               ),
             ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, top: 120),
-            child: Text(
-              _weather!.weatherDescription!,
-              style: climatFont,overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ],
-      ):SizedBox(),
+          ],
+        ):SizedBox(),
+      ),
     );
   }
 }

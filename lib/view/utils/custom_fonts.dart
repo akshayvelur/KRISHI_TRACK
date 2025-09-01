@@ -27,6 +27,11 @@ final splashLogo= GoogleFonts.orbitron(
                 fontWeight: FontWeight.bold,
                 fontSize: 18
               );
+                 final appBarFont= GoogleFonts.play(
+                color: const Color(0xFF407B52),
+                fontWeight: FontWeight.bold,
+                fontSize: 22
+              );
 
                final tempFont= GoogleFonts.aBeeZee(
                 color: Colors.white,
@@ -59,5 +64,27 @@ final splashLogo= GoogleFonts.orbitron(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 15, 
+                 
                 
               );
+                final homeXhusSmallFont= GoogleFonts.play(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+                fontSize: 15, );
+                 final homeMicroFont= GoogleFonts.play(
+                color: const Color.fromARGB(255, 90, 87, 87),
+                fontWeight: FontWeight.bold,
+                fontSize: 11, 
+                
+              );
+               final dMediumFont= GoogleFonts.play(
+                color: const Color(0xFF407B52),
+                fontWeight: FontWeight.bold,
+                fontSize: 18, 
+                
+              );
+   final detailsMediumfont= GoogleFonts.play(
+                color: Colors.black,
+              
+                fontSize: 22, );
+                

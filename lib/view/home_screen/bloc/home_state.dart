@@ -9,3 +9,16 @@ class WeatherPickedState extends HomeState{
 
   WeatherPickedState({required this.weather }); 
 }
+class MicroGreenOnTapState extends HomeState{
+ final Map items;
+
+  MicroGreenOnTapState({required this.items});
+
+}
+class VegitabelOnTapState extends HomeState{
+ final Map items;
+
+  VegitabelOnTapState({required this.items});
+
+
+}

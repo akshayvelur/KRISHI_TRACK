@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:krishi_track/view/bottom_navigator/bloc/bottom_sheet_bloc.dart';
 import 'package:krishi_track/view/home_screen/home_screen.dart';
+import 'package:krishi_track/view/profile_page/profile_screen.dart';
 import 'package:krishi_track/view/utils/custom_colors.dart';
 
 class BottomNavigatorScreen extends StatelessWidget {
   BottomNavigatorScreen({super.key});
 
   int index = 0;
-  List<Widget>screens=[HomeScreen(),Text("Schedule"),Text("chat bot"),Text("Profile")];
+  List<Widget>screens=[HomeScreen(),Text("Schedule"),Text("chat bot"),ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<BottomSheetBloc, BottomSheetState>(

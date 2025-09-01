@@ -17,13 +17,17 @@ class SplashImage extends StatelessWidget {
           height: mediaqueryHeight(10, context),
           child: Image.asset("assets/ONN  Green.jpeg", fit: BoxFit.cover),
         ),
-        Positioned(
-          bottom: mediaqueryHeight(0.27, context),left: mediaqueryWidth(0.25, context),
-          child: Text(
-            "KRISHI TRACK",
-            style:splashLogo,
-          ),
+         Align(
+      alignment: Alignment.center,
+      child: Padding(
+        padding: const EdgeInsets.only(top:350),
+        child: Text(
+          "KRISHI TRACK",
+          style: splashLogo,
         ),
+      ),
+    ),
+        
       ],
     );
   }
